@@ -1,0 +1,20 @@
+class Smartphone
+{
+	var a: Int=16
+	var b: Int=4
+	def calc()
+	{
+		println("Addition"+(a+b));
+		println("Substraction"+(a-b));
+		println("Multiplication"+(a*b));
+		println("Division"+(a/b));
+	}
+}
+object Main
+{
+	def main(args:Array[String])
+	{
+		var obj=new Smartphone();
+		obj.calc();
+	}
+}
