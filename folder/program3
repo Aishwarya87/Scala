@@ -1,0 +1,46 @@
+object Program2
+{
+def main(args:Array[String])
+{
+var a: Byte = 5
+var b:Short=5
+var c:Int=5
+var d:Long=5
+var e:Double=5
+var f: Char='A'
+var g: String="Aishwarya Ranghar"
+var h: Boolean= true
+println("a(Byte) is: "+a)
+println("b(Short) is: "+b)
+println("c(Int) is: "+c)
+println("d(Long) is: "+d)
+println("e(Double) is: "+e)
+println("f(Char) is: "+f)
+println("g(String) is: "+g)
+println("h(Boolean) is: "+h)
+val NullV: Null = null
+function1(2)
+function2(NullV)
+function3('C')
+functionToAdd(null)
+//logException(123)
+} //main method close
+def functionToAdd(thing:Null) : Unit= 
+   {
+println("For byte, minimum in range is:" +java.lang.Byte.MIN_VALUE)
+println("For byte, maximum in range is:" +java.lang.Byte.MAX_VALUE)
+println("For Short, minimum in range is:" +java.lang.Short.MIN_VALUE)
+println("For Short, maximum in range is:" +java.lang.Short.MAX_VALUE)
+println("For Long, minimum in range is:" +java.lang.Long.MIN_VALUE)
+println("For Long, maximum in range is:" +java.lang.Long.MAX_VALUE)
+println("For Double, minimum in range is:" +java.lang.Double.MIN_VALUE)
+println("For Double, maximum in range is:" +java.lang.Double.MAX_VALUE)
+}
+def function1(x:AnyVal) =println(x)
+def function2(x:AnyRef)= println(x)
+def function3(x:Any)= println(x)
+/*def logException(e:Exception):Nothing = {
+  println("logging Exception: %s".format(e.getMessage))
+  throw new Exception("My New Exception")
+} */
+}
