@@ -1,0 +1,45 @@
+import scala.io.StdIn.readLine
+class abc
+{
+	 val aish="she is a good person"
+	protected var check_protected=100
+}
+class abc2 extends abc
+{
+	
+ 	def display()
+	{
+	println(check_protected);
+	check_protected=101
+	println(check_protected+" hence protected can be accessed in subclasses");
+	}
+}
+object Aishwarya
+{
+	def immutable_val(imm_a: Int, imm_b:Int)
+	{
+	print(imm_a+imm_b)
+	}
+
+	def mutable_var( m_a: Int,  m_b:Int)
+	{
+	println(m_a+m_b)
+	}
+
+	def main(args:Array[String])
+	{
+	val imm_a= scala.io.StdIn.readInt()
+	val imm_b= scala.io.StdIn.readInt()
+	 immutable_val(imm_a,imm_b)
+	scala.io.StdIn.readLine()  //if user gives a space
+	 var m_a= scala.io.StdIn.readInt()
+	 var m_b= scala.io.StdIn.readInt()
+	m_a =1000
+	 mutable_var(m_a,m_b)
+    	//////////////////////////////////
+	var e=new abc()
+	println(e.aish);
+	var e1=new abc2();
+	e1.display();
+                  }
+}
