@@ -1,0 +1,59 @@
+  object Aishwarya
+{
+	def arithmetic(a:Int, b:Int):Unit={
+	 //function not returning anything
+	
+	println("Addition"+(a+b));
+	println("Substraction"+(a-b));
+	println("Multiplication"+(a*b));
+	println("Division"+(a/b));
+	println("Modulus of a%=" +(a%b));
+	println("------------------------------------------------------");
+	}
+	def relational(a:Int, b:Int)={
+	//always return true or false
+	
+ 	println("Are they equal? "+(a==b));
+	println("Are they not equal? "+(a==b));
+	println("Is a greater than b? "+(a>b));
+	println("Is a less than b? "+(a<b));
+	println("Is a greater than OR equal to b? "+(a>=b));
+	println("Is a less than OR eqaul to b? "+(a<=b));
+	println("------------------------------------------------------");
+	}
+	def logical(c:Boolean,d:Boolean)={
+	//always return trye or false but expect boolean values too for their input, finds
+	//the realtion between values
+ 	println("Are they equal? "+(c&&d));
+	println("Are they not equal? "+(c||d));
+	println("Is a greater than b? "+(!c));
+	println("------------------------------------------------------");
+	}
+	def bitwise(a:Int, b:Int)={
+	println("a: "+a);
+	println("b: "+b);
+ 	println("Bitwise AND of a and b is: "+(a&b));
+	println("Bitwise OR of a and b is: "+(a|b));
+	println("Bitwise XOR of a and b is: "+(a^b));
+	// returns 1 when bits differ
+	println("1's complement of a is: "+(~a));
+	//flips the individual bits 
+	println("Leftshift 3 of a is: "+(a<<3));
+	//3=00000011, <<3= 00011000, assuming its 8 bits, will be 32 bits in case of integer
+	println("Rightshift 3 of a is: "+(a>>3)); 
+	//00000011 , >>3 =0000000
+	println("Bitwise shift right, a>>>4: "+(a>>>4));
+	//sign bit is reserved here, so bitwise right shifts everything except the first bit
+	println("------------------------------------------------------");
+	}
+	def main(args: Array[String]):Unit={
+	var a =50;
+	var b=5;
+	var c= true
+	var d=false
+	arithmetic(a,b)
+	relational(a,b)
+	logical(c,d)
+	bitwise(a,b)
+	}
+}
