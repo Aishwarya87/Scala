@@ -1,0 +1,61 @@
+import scala.util.control._
+object program6
+{
+	def power(a:Int):Unit=
+	{
+	println("Square of "+a+" is "+(a*a))
+	println("Cube of "+a+" is "+(a*a*a))
+	println("Fourth power of "+a+" is "+(a*a*a*a))
+	}
+
+	def prime(b:Int):Unit=
+	{
+	val loop= new Breaks;
+	var i=0;var flg=0
+	loop.breakable{
+	for(i<-2 to b/2)
+	{
+		if(b%i==0) 
+		{
+		    flg=1
+		    loop.break;
+		}
+	}
+	}
+	if(flg==1)
+	{
+	println(b+" is prime!!")
+	}
+	else
+	{
+	println(b+" Isn't prime!!")
+	}
+	}
+
+	def Student(studmarks:Int):Unit=
+	{
+	var temp=0
+	if(studmarks>65)
+	{
+	temp=studmarks+20
+	println("student passed the exam with distinction ")
+	}
+	println("Final marks are "+temp)
+	}	
+
+def main(args:Array[String]):Unit=
+{
+
+println("Enter a number ")
+var a=scala.io.StdIn.readInt()
+println("Enter a number ")
+var b=scala.io.StdIn.readInt()
+power(a)
+println("------------------------------------------------")
+prime(b)
+println("------------------------------------------------")
+var studmarks:Int=75
+Student(studmarks)
+println("------------------------------------------------")
+}
+}
