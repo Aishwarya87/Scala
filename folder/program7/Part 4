@@ -1,0 +1,40 @@
+import util.control._
+object program7_4
+{
+	def breakImplement()={
+	val breakObj= new Breaks;
+	breakObj.breakable{
+	for(i<-1 to 10)
+	{
+		println(i);
+		if (i==3)
+		{
+			breakObj.break
+		}
+	}
+	}//breakable scope close
+	}//breakImplement method close
+
+	def continueImplement()={
+	val breakObj= new Breaks;
+	
+	for(i<-1 to 10)
+	{	breakObj.breakable{
+			if (i==3)
+			{
+			breakObj.break
+			}
+			else
+			{
+			println(i);
+			}
+		}
+	}
+	}//continueImplement method close
+	
+	def main(args:Array[String]):Unit=
+	{
+	breakImplement()
+	continueImplement()
+	}
+}
