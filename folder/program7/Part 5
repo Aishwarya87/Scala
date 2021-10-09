@@ -1,0 +1,15 @@
+object program7_5
+{ 
+  
+    	def smallest(m1: List[Int])={
+	println(m1.min)
+	}
+    	def main(args:Array[String])
+    	{
+      
+        val m1 = List(100, 2, 3,80,44)
+        smallest(m1)
+       
+      
+    	}
+}
